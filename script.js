@@ -74,7 +74,7 @@ document.addEventListener("keyup", e => keys[e.key] = false);
 function askQuestion(callback) {
     const q = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById("questionText").textContent = q.q;
-    document.getElementById("questionBox").style.display = "block";
+    document.getElementById("questionBox").style.display = "flex";
 
     document.getElementById("answerBtn").onclick = () => {
         let input = document.getElementById("answerInput").value.toLowerCase();
@@ -111,7 +111,7 @@ function startGame() {
         enemy.x += enemy.dir * 2;
         if (enemy.x <= 500 || enemy.x >= 700) enemy.dir *= -1;
 
-        // Cek ambil kunci
+        // Ambil kunci
         if (!key.taken &&
             player.x < key.x + key.w &&
             player.x + player.w > key.x &&
@@ -124,7 +124,7 @@ function startGame() {
             });
         }
 
-        // Cek buka pintu
+        // Buka pintu
         if (key.taken &&
             player.x < door.x + door.w &&
             player.x + player.w > door.x
