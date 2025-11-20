@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>NEblox Game</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEblox Game - Final</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- START SCREEN -->
-<div id="startScreen">
-    <h1 class="title">NEblox Game</h1>
-    <img src="assets/start-button.png" id="startBtn" class="start-button">
+<div id="startScreen" class="centered">
+  <h1 class="title">NEblox Game</h1>
+  <img id="startBtn" class="start-button" src="assets/btn-start.png" alt="Start">
+  <p class="hint">Arrow ← → untuk bergerak · Space untuk lompat · A untuk menyerang</p>
 </div>
 
 <!-- GAME CANVAS -->
 <canvas id="gameCanvas" width="900" height="500"></canvas>
 
+<!-- HUD (invisible — drawn on canvas) -->
+
 <!-- QUESTION BOX -->
-<div id="questionBox">
-    <div id="questionContent">
-        <p id="questionText">...</p>
-        <input type="text" id="answerInput" placeholder="Jawaban...">
-        <button id="answerBtn">Kirim</button>
+<div id="questionBox" role="dialog" aria-modal="true">
+  <div id="questionContent">
+    <p id="questionText">...</p>
+    <input id="answerInput" placeholder="Jawaban..." autocomplete="off" />
+    <div class="row">
+      <button id="answerBtn">Kirim</button>
+      <button id="cancelBtn" class="secondary">Batal</button>
     </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
