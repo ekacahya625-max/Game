@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEblox Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen">
+    <h1>NEblox Game</h1>
+    <button id="startBtn">START</button>
+</div>
+
+<canvas id="gameCanvas" width="900" height="500"></canvas>
+
+<!-- Modal Pertanyaan -->
+<div id="questionBox">
+    <div class="box">
+        <h2>Pertanyaan:</h2>
+        <p id="questionText"></p>
+        <input type="text" id="answerInput" placeholder="Jawaban...">
+        <button id="answerBtn">Submit</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
